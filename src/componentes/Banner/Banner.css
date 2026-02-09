@@ -1,0 +1,83 @@
+/* Contenedor principal del banner */
+.banner {
+  width: 100%;
+  min-height: 620px;              /* Altura mínima del banner */
+  background-size: cover;         /* La imagen cubre todo el contenedor */
+  background-position: center;    /* Imagen centrada */
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;               /* Evita que la imagen se salga */
+}
+
+/* Overlay oscuro sobre la imagen */
+.banner-overlay {
+  position: absolute;   
+  inset: 0;             /* top:0 right:0 bottom:0 left:0 */
+  background: rgba(10, 45, 85, 0.75);
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start; /* Alineado a la izquierda */
+}
+
+/* Contenido del banner (texto + botones) */
+.banner-content {
+  max-width: 600px; /* Limita el ancho del texto */
+  padding: 40px;
+  color: #fff;
+  text-align: left;
+}
+
+/* Título principal */
+.banner-content h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+/* Subtítulo / descripción */
+.banner-content p {
+  font-size: 1.5rem;
+  line-height: 1.6;
+  margin-bottom: 24px;
+  font-weight: 600;
+}
+
+/* Contenedor de botones */
+.banner-buttons {
+  display: flex;
+  gap: 16px; /* Espacio entre botones */
+}
+
+/* Estilos base de botones */
+.btn {
+  padding: 12px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+/* Botón principal */
+.btn-primary {
+  background: #ffffff;
+  color: #0a2d55;
+}
+
+/* Hover botón principal */
+.btn-primary:hover {
+  background: #143C78;
+  color: #ffffff;
+}
+
+/* Botón secundario */
+.btn-secondary {
+  border: 1px solid #ffffff;
+  background: #143C78;
+  color: #ffffff;
+}
+
+/* Hover botón secundario */
+.btn-secondary:hover {
+  background: #ffffff;
+  color: #0a2d55;
+}
