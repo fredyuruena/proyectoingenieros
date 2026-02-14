@@ -14,7 +14,7 @@ export const Header = () => {
 
       {/* Barra de navegacion principal */}
       <nav className="Barra-navegacion">
-        <NavLink to="/inicio">Inicio</NavLink>
+        <NavLink to="/">Inicio</NavLink>
         <NavLink to="/nosotros">Nosotros</NavLink>
         <NavLink to="/bolsa-trabajo">Bolsa de trabajo</NavLink>
         <NavLink to="/membresias">Membresias</NavLink>
