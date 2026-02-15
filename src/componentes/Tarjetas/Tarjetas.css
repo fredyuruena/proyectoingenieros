@@ -1,0 +1,70 @@
+.tarjetas {
+  background-color: #f3f4f6;
+  padding: 80px 20px;
+}
+
+.tarjetas__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.tarjetas__subtitle {
+  color: #1e3a8a;
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-align: left;
+}
+
+.tarjetas__title {
+  font-size: 40px;
+  font-weight: 700;
+  margin: 20px 0 50px;
+  color: #111827;
+  line-height: 1.2;
+  text-align: left;
+}
+
+.tarjetas__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.tarjeta {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 14px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease;
+}
+
+.tarjeta:hover {
+  transform: translateY(-6px);
+}
+
+.tarjeta__icon {
+  width: 50px;
+  height: 50px;
+  background-color: #e0e7ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.tarjeta__title {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #111827;
+}
+
+.tarjeta__description {
+  color: #6b7280;
+  font-size: 15px;
+  line-height: 1.6;
+}
