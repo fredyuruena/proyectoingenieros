@@ -1,0 +1,111 @@
+.membresias {
+  padding: 80px 20px;
+  background: #e0e7ff;
+}
+
+.membresias__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-bottom: 60px;
+}
+
+.membresia-card {
+  background: white;
+  padding: 25px;
+  border-radius: 14px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  text-align: left;
+  border: 2px solid transparent; 
+  transition: all 0.3s ease;
+}
+
+.membresia-card:hover {
+  border: 4px solid #153e75; 
+  transform: translateY(-5px); 
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.membresias-subtitulo {
+  font-size: 50px;
+  font-weight: 700;
+  color: #153e75;
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+
+.membresia-nombre {
+  font-size: 32px;   
+  font-weight: 700;
+  margin: 0 0 10px 0;
+  color: #153e75;
+}
+
+.membresias-descripcion {
+  font-size: 19px;
+  color: #6b7280;
+  margin-top: 2px;
+  max-width: 750px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+
+.precio {
+  font-size: 22px;
+  font-weight: bold;
+  margin: 15px 0;
+}
+
+.tabla-comparativa table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+}
+
+.tabla-comparativa th,
+.tabla-comparativa td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: center;
+}
+
+.tabla-comparativa th {
+  background: #153e75;
+  color: white;
+}
+
+.error {
+  color: red;
+  text-align: center;
+}
+
+.incluye-anterior {
+  font-weight: 600;
+  color: #153e75;
+  margin-bottom: 10px;
+}
+
+.membresia-card ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.btn-unirse {
+  background-color: #e0e7ff; 
+  color: #153e75;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  margin-top: 15px;
+}
+
+.btn-unirse:hover {
+  background-color: #153e75; 
+  color: white;
+  transform: translateY(-2px);
+}
