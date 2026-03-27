@@ -1,130 +1,100 @@
 .footer {
-  background-color: #153e75;
+  background-color: #0b4e41; /* Verde oscuro de la imagen */
   color: #ffffff;
-  width: 100%;
-}
-
-/* Contenedor principal */
-.footer-container {
-  display: flex;
-  justify-content: space-between;
-  gap: 40px;
-  padding: 60px 40px;
-  flex-wrap: wrap;
-}
-
-/* Columnas */
-.footer-column {
-  flex: 1;
-  min-width: 220px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 60px 20px 30px;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  text-align: left;
+  align-items: center; /* Centra el contenedor principal, pero no el texto interno */
 }
 
-.footer-column h4 {
-  margin-bottom: 16px;
-  font-size: 1.1rem;
+.footer-content {
+  max-width: 1200px;
+  width: 100%;
+  display: grid;
+  /* Definimos columnas para que el contenido se distribuya, pero todo alineado a la izquierda */
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+  gap: 40px;
+  text-align: left; /* Asegura que todo el texto dentro del grid vaya a la izquierda */
 }
 
-/* Logo */
+.footer-column {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Alinea los elementos flex (como el logo) a la izquierda */
+}
+
+/* Estilo del Logo (Cuadro gris de la imagen) */
 .footer-logo {
-  width: 120px;
-  margin-bottom: 16px;
+  background-color: #d1d5db;
+  color: #ffffff;
+  width: 180px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 1.4rem;
+  margin-bottom: 25px;
+  border-radius: 2px;
 }
 
-/* Texto */
-.footer-column p {
-  font-size: 0.9rem;
-  line-height: 1.6;
+/* Información de contacto */
+.footer-contact p {
+  margin: 8px 0;
+  font-size: 0.95rem;
+  color: #e5e7eb;
+}
+
+/* Títulos de las columnas */
+.footer-heading {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 25px;
+  margin-top: 0;
 }
 
 /* Listas */
-.footer-column ul {
+.footer-list {
   list-style: none;
   padding: 0;
   margin: 0;
-  text-align: left;
+  text-align: left; /* Refuerza la alineación a la izquierda */
 }
 
-.footer-column ul li {
-  margin-bottom: 10px;
-  font-size: 0.95rem;
+.footer-list li {
+  margin-bottom: 12px;
+  font-size: 1rem;
+  color: #e5e7eb;
   cursor: pointer;
+  transition: color 0.2s;
 }
 
-/* Contacto */
-.footer-contact li {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  text-align: left;
-}
-.footer-contact li img {
-  width: 18px;
-  height: 18px;
-}
-
-/* Redes sociales */
-.footer-socials {
-  display: flex;
-  gap: 12px;
-  margin-top: 20px;
-}
-.footer-socials img {
-  width: 18px;
-  height: 18px;
-}
-
-.footer-socials a {
-  width: 36px;
-  height: 36px;
-  background: rgba(255, 255, 255, 0.25);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 8px;
-  text-decoration: none;
-  color: #fff;
-  font-weight: bold;
-}
-
-/* Hover redes */
-.footer-socials a:hover {
-  background: rgba(255, 255, 255, 0.4);
-}
-
-/* Barra inferior */
-.footer-bottom {
-  border-top: 1px solid rgba(255, 255, 255, 0.3);
-  padding: 20px 40px;
-  display: flex;
-  justify-content: space-between;
-  font-size: 0.85rem;
-  flex-wrap: wrap;
-}
-
-.footer-legal {
-  display: flex;
-  gap: 20px;
-}
-
-.footer-legal a {
+.footer-list li:hover {
   color: #ffffff;
-  text-decoration: none;
 }
 
-.footer-legal a:hover {
-  text-decoration: underline;
+/* Sección inferior de derechos */
+.footer-bottom {
+  max-width: 1200px;
+  width: 100%;
+  margin-top: 50px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: left; /* Alineado a la izquierda como el resto */
+  font-size: 0.85rem;
+  color: #9ca3af;
 }
-/* 2da columna centrada */
-.footer-column:nth-child(2) {
-  margin-left: calc(50% - 400px);
-}
-/* 2da columna responsive */
+
+/* Responsividad para móviles */
 @media (max-width: 768px) {
-  .footer-column:nth-child(2) {
-    margin-left: 0;
+  .footer-content {
+    grid-template-columns: 1fr; /* Una sola columna en móviles */
+    gap: 30px;
+  }
+  
+  /* Mantenemos la alineación a la izquierda incluso en móvil según tu solicitud */
+  .footer-column {
+    align-items: flex-start;
   }
 }

@@ -4,8 +4,6 @@ import viteLogo from '/vite.svg'
 import './App.css'
 
 import { Header } from "./componentes/Header/Header.jsx";
-import Banner from './componentes/Banner/Banner'
-import bannerImage from './assets/banner-home.jpg'
 import Footer from './componentes/Footer/Footer'
 
 
@@ -13,11 +11,9 @@ import { Routes, Route } from "react-router-dom";
 
 /* Imports de routerDoom */
 import Inicio from "./Paginas/Inicio/Inicio.jsx";
-import Nosotros from "./Paginas/Nosotros/Nosotros.jsx";
-import BolsaTrabajo from "./Paginas/BolsaTrabajo/BolsaTrabajo.jsx";
-import Membresias from "./Paginas/Membresias/Membresias.jsx";
-import Contacto from "./Paginas/Contacto/Contacto.jsx";
-
+import Login from "./Paginas/Login/Login.jsx";
+import Registro from "./Paginas/Registro/Registro.jsx";
+import FormularioVacante from "./Paginas/FormularioVacante/FormularioVacante.jsx";
 
 
 
@@ -36,10 +32,10 @@ function App() {
       
       <Routes>
         <Route path="/" element={<Inicio />} />
-        <Route path="/nosotros" element={<Nosotros />} />
-        <Route path="/bolsa-trabajo" element={<BolsaTrabajo />} />
-        <Route path="/membresias" element={<Membresias />} />
-        <Route path="/contacto" element={<Contacto />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/registro" element={<Registro />} />
+        <Route path="/formulariovacante" element={<FormularioVacante />} />
+        
       </Routes>
       
     </main>

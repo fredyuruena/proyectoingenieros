@@ -1,61 +1,54 @@
 import './Banner.css';
 
-// Recibe props para que pueda usarse en distintas secciones
-const Banner = ({
-  title,              // Título principal del banner
-  subtitle,           // Texto descriptivo (opcional)
-  backgroundImage,    // Imagen de fondo del banner
-  primaryButton,      // Botón principal (texto + link)
-  secondaryButton     // Botón secundario (texto + link)
-}) => {
+import React, { useState, useEffect } from "react";
+import "./Banner.css";
+
+const Banner = ({ slides = [] }) => {
+  const [index, setIndex] = useState(0);
+
+  // Cambio automático cada 5s
+  useEffect(() => {
+    if (slides.length <= 1) return;
+
+    const interval = setInterval(() => {
+      setIndex((prev) => (prev + 1) % slides.length);
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, [slides.length]);
+
+  if (!slides.length) return null;
+
   return (
-    // Section principal del banner
-    // Usamos style inline para cambiar la imagen de fondo dinámicamente
-    <section
-      className="banner"
-      style={{ backgroundImage: `url(${backgroundImage})` }}
-    >
-      {/* Capa oscura encima de la imagen */}
-      <div className="banner-overlay">
+    <div className="banner">
 
-        {/* Contenedor del contenido textual */}
-        <div className="banner-content">
+      {/* Imagen */}
+      <div
+        className="banner__slide"
+        style={{ backgroundImage: `url(${slides[index].image})` }}
+      >
+        <div className="banner__overlay"></div>
 
-          {/* Título principal */}
-          <h1>{title}</h1>
-
-          {/* El subtítulo solo se renderiza si existe */}
-          {subtitle && <p>{subtitle}</p>}
-
-          {/* Contenedor de botones */}
-          <div className="banner-buttons">
-
-            {/* Botón principal:
-                Solo aparece si se envía la prop primaryButton */}
-            {primaryButton && (
-              <a
-                href={primaryButton.link}
-                className="btn btn-primary"
-              >
-                {primaryButton.text}
-              </a>
-            )}
-
-            {/* Botón secundario:
-                También es opcional */}
-            {secondaryButton && (
-              <a
-                href={secondaryButton.link}
-                className="btn btn-secondary"
-              >
-                {secondaryButton.text}
-              </a>
-            )}
-
-          </div>
+        {/* Texto */}
+        <div className="banner__content">
+          <h2>{slides[index].title}</h2>
+          <p>{slides[index].subtitle}</p>
         </div>
       </div>
-    </section>
+
+      {/* Indicadores */}
+      <div className="banner__dots">
+        {slides.map((_, i) => (
+          <span
+            key={i}
+            className={`dot ${i === index ? "active" : ""}`}
+            onClick={() => setIndex(i)}
+          ></span>
+        ))}
+      </div>
+
+    </div>
   );
 };
+
 export default Banner;

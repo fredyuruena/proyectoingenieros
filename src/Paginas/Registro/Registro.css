@@ -1,0 +1,147 @@
+.registro-page {
+  display: flex;
+  min-height: 100vh;
+  font-family: 'Manrope', sans-serif;
+  background-color: #ffffff;
+}
+
+.registro-left {
+  display: none;
+  background-color: #fca311;
+  /* Color amarillo-naranja de la imagen original */
+  flex: 1;
+}
+
+@media (min-width: 900px) {
+  .registro-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.registro-logo-placeholder {
+  background-color: #d3d3d3;
+  color: #000000;
+  padding: 15px 40px;
+  font-weight: 700;
+  border-radius: 4px;
+  margin-bottom: 50px;
+}
+
+.registro-illustration {
+  color: #4a6070;
+  opacity: 0.8;
+}
+
+.registro-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+.registro-form-container {
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.registro-title {
+  color: #1d6b56;
+  /* Verde oscuro original */
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.registro-subtitle {
+  color: #90a4ae;
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+.form-group {
+  text-align: left;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.form-group label {
+  display: block;
+  font-size: 14px;
+  font-weight: 700;
+  color: #1d6b56;
+  margin-bottom: 8px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid transparent;
+  background-color: #e6e6e6;
+  /* Gris más oscuro para que resalte el input según maqueta */
+  border-radius: 8px;
+  font-family: 'Manrope', sans-serif;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.3s;
+  color: #333;
+}
+
+.form-group input::placeholder {
+  color: #90a4ae;
+}
+
+.form-group input:focus {
+  border-color: #1d6b56;
+}
+
+.password-toggle {
+  position: absolute;
+  right: 15px;
+  top: 38px;
+  cursor: pointer;
+  color: #1d6b56;
+  font-size: 16px;
+}
+
+.btn-primary {
+  width: 100%;
+  padding: 14px;
+  background-color: #1d6b56;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-family: 'Manrope', sans-serif;
+  margin-top: 10px;
+  margin-bottom: 25px;
+}
+
+.btn-primary:hover {
+  background-color: #154e3f;
+}
+
+.registro-footer {
+  font-size: 14px;
+  color: #90a4ae;
+  margin-top: 20px;
+  font-weight: 600;
+}
+
+.registro-footer a {
+  color: #1d6b56;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.registro-footer a:hover {
+  text-decoration: underline;
+}

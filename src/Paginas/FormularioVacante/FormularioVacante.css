@@ -1,0 +1,161 @@
+.vacante-page {
+  background-color: #fca311;
+  /* Color amarillo-naranja de fondo completo */
+  min-height: 100vh;
+  padding: 40px 20px;
+  font-family: 'Manrope', sans-serif;
+}
+
+.vacante-container {
+  background-color: #ffffff;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  /* Sombreado más fuerte para que resalte sobre el amarillo */
+}
+
+.vacante-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.vacante-logo {
+  background-color: #d3d3d3;
+  color: #000000;
+  display: inline-block;
+  padding: 10px 50px;
+  font-weight: 700;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+
+.vacante-header h1 {
+  color: #1d6b56;
+  font-size: 24px;
+  margin: 0;
+}
+
+.vacante-section-title {
+  color: #1d6b56;
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  margin-top: 30px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px;
+}
+
+@media (min-width: 600px) {
+  .form-grid.grid-2 {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .form-grid.grid-3 {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+.vacante-group {
+  margin-bottom: 15px;
+}
+
+.vacante-group input,
+.vacante-group select {
+  width: 100%;
+  padding: 12px 15px;
+  background-color: #e6e6e6;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  font-family: 'Manrope', sans-serif;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.3s;
+  color: #333;
+}
+
+.vacante-group input::placeholder {
+  color: #90a4ae;
+}
+
+.vacante-group input:focus,
+.vacante-group select:focus {
+  border-color: #1d6b56;
+}
+
+.radio-group-container {
+  background-color: #e6e6e6;
+  padding: 12px 15px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  font-size: 14px;
+  color: #90a4ae;
+}
+
+.radio-group-container span {
+  font-weight: 600;
+  margin-right: 10px;
+  color: #1d6b56;
+}
+
+.radio-option {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.cv-upload-section {
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 30px;
+}
+
+.cv-upload-label {
+  display: inline-block;
+  color: #1d6b56;
+  font-weight: 700;
+  font-size: 14px;
+  cursor: pointer;
+  padding: 10px 20px;
+  transition: opacity 0.3s;
+}
+
+.cv-upload-label:hover {
+  opacity: 0.8;
+}
+
+.cv-upload-label input {
+  display: none;
+}
+
+.submit-btn-container {
+  text-align: center;
+}
+
+.submit-btn-container .btn-primary {
+  width: auto;
+  min-width: 200px;
+  padding: 14px;
+  background-color: #1d6b56;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-family: 'Manrope', sans-serif;
+}
+
+.submit-btn-container .btn-primary:hover {
+  background-color: #154e3f;
+}

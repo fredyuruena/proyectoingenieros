@@ -15,15 +15,12 @@ export const Header = () => {
       {/* Barra de navegacion principal */}
       <nav className="Barra-navegacion">
         <NavLink to="/">Inicio</NavLink>
-        <NavLink to="/nosotros">Nosotros</NavLink>
-        <NavLink to="/bolsa-trabajo">Bolsa de trabajo</NavLink>
-        <NavLink to="/membresias">Membresias</NavLink>
-        <NavLink to="/contacto">Contacto</NavLink>
+        <NavLink to="/acualiza">Actualiza</NavLink>
+        <NavLink to="/explora">Explora</NavLink>
+        <NavLink to="/aplica-hoy">Aplica Hoy</NavLink>
+        
       </nav>
-      {/* Boton de afiliacion */}
-      <div className="">
-        <NavLink to="/afiliate" className="btn-header">Afiliate</NavLink>
-      </div>
+      
     </div>
     </header>
   );

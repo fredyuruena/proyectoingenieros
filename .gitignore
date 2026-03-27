@@ -2,6 +2,7 @@
 logs
 *.log
 npm-debug.log*
+npm install lucide-react*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*

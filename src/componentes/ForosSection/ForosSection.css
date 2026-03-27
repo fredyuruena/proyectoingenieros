@@ -1,0 +1,75 @@
+.foros-section {
+  padding: 40px 20px;
+  background-color: #f5f5f5;
+  text-align: center;
+}
+
+.foros-title {
+  background-color: #FBB854;
+  color: #0E534A;
+  padding: 15px;
+  border-radius: 10px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.foros-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+/* Tarjeta */
+.foro-card {
+  padding: 15px;
+  background-color: #fff;
+  cursor: pointer;
+  overflow: hidden;
+  border-radius: 12px; 
+  overflow: hidden;
+}
+
+.foro-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.15);
+}
+
+/* Imagen */
+.foro-img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  margin-bottom: 10px;
+  transition: transform 0.4s ease;
+  border-radius: 10px;
+}
+
+.foro-card:hover .foro-img {
+  transform: scale(1.08);
+}
+
+/* Fecha */
+.foro-fecha {
+  background-color: #FBB854;
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 8px;
+  font-size: 14px;
+  margin-bottom: 10px;
+  display: inline-block;
+}
+
+/* Título */
+.foro-titulo {
+  font-size: 18px;
+  color: #0E534A;
+  margin-bottom: 10px;
+}
+
+/* Línea decorativa */
+.foro-line {
+  height: 2px;
+  width: 60%;
+  margin: 0 auto;
+  background-color: #FBB854;
+}

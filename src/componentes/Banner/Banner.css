@@ -1,83 +1,65 @@
-/* Contenedor principal del banner */
 .banner {
   width: 100%;
-  min-height: 620px;              /* Altura mínima del banner */
-  background-size: cover;         /* La imagen cubre todo el contenedor */
-  background-position: center;    /* Imagen centrada */
+  margin-bottom: 40px;
+}
+
+.banner__slide {
   position: relative;
-  border-radius: 16px;
-  overflow: hidden;               /* Evita que la imagen se salga */
+  height: 220px;
+  border-radius: 12px;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  background-position: center 30%;
 }
 
-/* Overlay oscuro sobre la imagen */
-.banner-overlay {
-  position: absolute;   
-  inset: 0;             /* top:0 right:0 bottom:0 left:0 */
-  background: rgba(10, 45, 85, 0.75);
-  display: flex;
-  align-items: flex-end;
-  justify-content: flex-start; /* Alineado a la izquierda */
+/* Overlay verdoso */
+.banner__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(20, 90, 80, 0.65);
 }
 
-/* Contenido del banner (texto + botones) */
-.banner-content {
-  max-width: 600px; /* Limita el ancho del texto */
-  padding: 40px;
+/* Contenido */
+.banner__content {
+  position: absolute;
+  z-index: 2;
   color: #fff;
-  text-align: left;
+  top: 50%;
+  left: 40px;
+  transform: translateY(-50%);
+  max-width: 400px;
 }
 
-/* Título principal */
-.banner-content h1 {
-  font-size: 3.5rem;
+.banner__content h2 {
+  font-size: 1.6rem;
   font-weight: 700;
-  margin-bottom: 16px;
+  margin-bottom: 10px;
 }
 
-/* Subtítulo / descripción */
-.banner-content p {
-  font-size: 1.5rem;
-  line-height: 1.6;
-  margin-bottom: 24px;
-  font-weight: 600;
+.banner__content p {
+  font-size: 1rem;
+  margin: 0;
 }
 
-/* Contenedor de botones */
-.banner-buttons {
+/* Indicadores */
+.banner__dots {
   display: flex;
-  gap: 16px; /* Espacio entre botones */
+  justify-content: center;
+  margin-top: 10px;
+  gap: 8px;
 }
 
-/* Estilos base de botones */
-.btn {
-  padding: 12px 24px;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: 600;
-  transition: all 0.3s ease;
+.dot {
+  width: 10px;
+  height: 10px;
+  background: #ccc;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
-/* Botón principal */
-.btn-primary {
-  background: #ffffff;
-  color: #0a2d55;
-}
-
-/* Hover botón principal */
-.btn-primary:hover {
-  background: #143C78;
-  color: #ffffff;
-}
-
-/* Botón secundario */
-.btn-secondary {
-  border: 1px solid #ffffff;
-  background: #143C78;
-  color: #ffffff;
-}
-
-/* Hover botón secundario */
-.btn-secondary:hover {
-  background: #ffffff;
-  color: #0a2d55;
+.dot.active {
+  background: #0E534A;
+  transform: scale(1.2);
 }
