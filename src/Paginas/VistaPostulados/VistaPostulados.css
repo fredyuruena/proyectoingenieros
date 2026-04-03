@@ -1,0 +1,121 @@
+/* 
+  Contenedor principal de la vista de postulados.
+  Utilizamos flexbox para centrar el contenido y el color de fondo para simular
+  las franjas laterales de la imagen de referencia.
+*/
+.vista-postulados-contenedor {
+  display: flex;
+  justify-content: center;
+  background-color: #fca311; /* Color amarillo-naranja para las franjas laterales */
+  padding: 40px 0; /* Espaciado superior e inferior para separar del header y footer */
+  min-height: 80vh;
+  font-family: 'Manrope', sans-serif;
+}
+
+/* 
+  Contenedor blanco donde va todo el contenido.
+  Se limita el ancho para que siempre aparezcan las franjas amarillas a los lados.
+*/
+.vista-postulados-contenido {
+  background-color: #ffffff;
+  width: 90%;
+  max-width: 1100px;
+  padding: 40px;
+  border-radius: 4px; /* Opcional, para suavizar bordes */
+  min-height: 60vh;
+}
+
+/* 
+  Estilos del recuadro gris que funciona como "Logo"
+  según el mockup proporcionado.
+*/
+.logo-placeholder-postulados {
+  background-color: #d3d3d3; /* Gris claro */
+  color: #000000;
+  padding: 15px 40px;
+  font-weight: 700;
+  display: inline-block;
+  margin-bottom: 40px;
+}
+
+/* 
+  Título en verde oscuro y centrado 
+*/
+.titulo-postulados {
+  color: #1d6b56; /* Verde oscuro institucional */
+  text-align: center;
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 50px;
+}
+
+/* 
+  Sistema de grilla (Grid) para acomodar las tarjetas.
+  Automáticamente se ajustan en columnas dependiendo del espacio disponible.
+  Para pantallas grandes, son 3 columnas (1fr 1fr 1fr).
+*/
+.tarjetas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  justify-items: center; /* Centrar cada bloque de tarjeta */
+}
+
+/* 
+  Estilo individual de cada tarjeta.
+  Tiene sombra, padding y bordes redondeados.
+*/
+.tarjeta-postulado {
+  background-color: #ffffff;
+  border: 1px solid #eaeaea;
+  border-radius: 8px;
+  padding: 30px 20px;
+  width: 100%;
+  max-width: 320px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1); /* Sombra para resaltar como en la referencia */
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.tarjeta-postulado:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* 
+  Nombre del postulante, usando el color naranja/dorado.
+*/
+.tarjeta-nombre {
+  color: #fca311;
+  font-size: 22px;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+/* 
+  Texto con la información de contacto o detalles genéricos
+*/
+.tarjeta-dato {
+  font-size: 14px;
+  margin: 10px 0;
+  line-height: 1.4;
+}
+
+/* 
+  Estilo específico para el texto oscuro (ej. teléfono o email en este caso) 
+*/
+.tarjeta-email {
+  color: #333333;
+}
+
+/* 
+  Estilo específico para el texto en verde (Skills, Experiencia, Último empleo)
+*/
+.tarjeta-verde {
+  color: #1d6b56;
+}
+
+/* Modificador de los bold keys */
+.tarjeta-verde strong {
+  font-weight: 600;
+}

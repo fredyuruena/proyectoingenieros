@@ -14,6 +14,7 @@ import Inicio from "./Paginas/Inicio/Inicio.jsx";
 import Login from "./Paginas/Login/Login.jsx";
 import Registro from "./Paginas/Registro/Registro.jsx";
 import FormularioVacante from "./Paginas/FormularioVacante/FormularioVacante.jsx";
+import VistaPostulados from "./Paginas/VistaPostulados/VistaPostulados.jsx";
 
 
 
@@ -35,6 +36,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/registro" element={<Registro />} />
         <Route path="/formulariovacante" element={<FormularioVacante />} />
+        <Route path="/vistapostulados" element={<VistaPostulados/>} />
         
       </Routes>
       
